@@ -13,13 +13,13 @@
 // STEP 1: Select DOM Elements
 // ===================================
 // TODO: Select the theme toggle button (id: 'themeToggle')
-const themeToggleBtn = null;
+const themeToggleBtn = document.getElementbyId('themeToggle');
 
 // TODO: Select the theme icon element (id: 'themeIcon')
-const themeIcon = null;
+const themeIcon = document.getElementbyId('themeIcon');
 
 // TODO: Get the <body> element
-const body = null;
+const body = document.querySelector('body');
 
 
 // ===================================
@@ -36,7 +36,7 @@ const body = null;
 function toggleDarkMode() {
     // TODO 1: Toggle the 'dark-mode' class on the body element
     // Your code here:
-
+    
     // TODO 2: Update the icon based on the current mode
     // Your code here:
     
