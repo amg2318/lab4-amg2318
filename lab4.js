@@ -39,13 +39,11 @@ function toggleDarkMode() {
     body.classList.toggle('dark-mode');
     // TODO 2: Update the icon based on the current mode
     // Your code here:
-    console.log(body.classList);
-    console.log(body.classList.contains('dark-mode'));
     themeIcon.innerHTML = '<span>' + updateIcon(body.classList.contains('dark-mode')) + '<span>';
     // Optional: Save the current mode to localStorage
     // This is optional - try it after completing the basic functionality!
     // Your code here (optional):
-
+    localStorage.setItem('mode', body.classList.item(0));
 }
 
 
@@ -76,7 +74,10 @@ function loadSavedTheme() {
     // 2. If it exists and is 'dark', add the dark-mode class to body
     // 3. Update the icon accordingly
     // Your code here:
-
+    let preference = localStorage.getItem('mode');
+    if (preference == 'dark-mode') {
+        toggleDarkMode();
+    }
 }
 
 // Call the function when the page loads (uncomment when you implement it)
